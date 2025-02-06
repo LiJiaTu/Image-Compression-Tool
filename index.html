@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片压缩工具</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>图片压缩工具</h1>
+            <p>支持 PNG、JPG、JPEG、WEBP 等多种格式图片压缩</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="upload-area" id="dropZone">
+                    <input type="file" id="fileInput" accept="image/png,image/jpeg" hidden multiple>
+                    <div class="upload-content">
+                        <svg width="50" height="50" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+                        </svg>
+                        <p>拖放图片到这里或点击上传</p>
+                        <p class="upload-hint">支持批量上传多张图片</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-section" id="comparisonSection" style="display: none;">
+                <div class="images-list" id="imagesList">
+                    <!-- 图片列表将在这里动态生成 -->
+                </div>
+                
+                <div class="controls">
+                    <div class="quality-control">
+                        <label for="qualitySlider">压缩质量：<span id="qualityValue">80%</span></label>
+                        <input type="range" id="qualitySlider" min="1" max="100" value="80">
+                    </div>
+                    <button id="downloadAllBtn" class="download-button">批量下载所有图片</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
